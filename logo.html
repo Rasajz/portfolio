@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qualifications - Rasaj</title>
+    <link rel="stylesheet" href="logo.css" />
+    <style>
+      /* Basic Reset */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background-image: url("https://t4.ftcdn.net/jpg/03/11/29/69/360_F_311296905_imwue6eE1ZUtV7YzHEkJxPz4gQIGhMrF.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      /* Overlay for readability */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+      }
+
+      /* Navigation Bar */
+      .nav-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .nav-item a button {
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .nav-item a button:hover {
+        background: #1abc9c;
+      }
+
+      /* Table Container */
+      .table-container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(23, 23, 23, 0.3);
+        width: 80%;
+        max-width: 800px;
+        position: relative;
+        z-index: 1;
+        margin-top: 70px;
+      }
+
+      /* Institution Logos */
+      .institution-logo {
+        width: 100px;
+        height: auto;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        border-radius: 8px;
+      }
+
+      .uwgb-logo {
+        width: 120px;
+        height: auto;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        border-radius: 8px;
+      }
+
+      /* Table Styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      th {
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      td {
+        font-size: 15px;
+        vertical-align: middle; /* Align logos and text vertically */
+      }
+
+      tr:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Heading */
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 25px;
+      }
+      .para {
+        margin-top: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html"
+      ><img
+        class="top-left-icon"
+        src="https://i.pinimg.com/236x/e7/05/a5/e705a5d8cc25357c112e37d851844cab.jpg"
+        alt="Icon"
+    /></a>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+      <div class="nav-item">
+        <a href="biography.html"><button>My Biography</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="test cide.html"><button>Education</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="cv.html"><button>Resume</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="Achievements.html"><button>Achievements</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="hobbies.html"><button>Hobbies</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="photos.html"><button>Photo Gallery</button></a>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <h1>Educational Background</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Program</th>
+            <th>GPA/Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                class="institution-logo"
+                src="./img/download.png"
+                alt="Prithvi Narayan Logo"
+              />
+              <p class="para">Prithvi Narayan School</p>
+            </td>
+            <td>Secondary School</td>
+            <td>3.80 GPA</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="institution-logo"
+                src="./img/Viswa niketan.png"
+                alt="Viswa Niketan Logo"
+              />
+              <p class="para">Viswa Secondary School</p>
+            </td>
+            <td>Science + Computer Science</td>
+            <td>3.32 (Grade 11)<br />3.67 (Grade 12)</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="uwgb-logo"
+                src="https://www.uwgb.edu/UWGBCMS/media/Assessment/Images/uwgb-campus.jpg"
+                alt="UWGB Campus"
+              />
+              University of Wisconsin-Green Bay
+            </td>
+            <td>Information Science (Current)</td>
+            <td>In Progress 🚀<br />Expected Graduation: 2028</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

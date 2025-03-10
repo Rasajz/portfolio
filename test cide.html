@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qualifications - Rasaj</title>
+    <link rel="stylesheet" href="logo.css" />
+    <link rel="stylesheet" href="header.css" />
+    <style>
+      /* Basic Reset */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background-image: url("https://t4.ftcdn.net/jpg/03/11/29/69/360_F_311296905_imwue6eE1ZUtV7YzHEkJxPz4gQIGhMrF.jpg");
+        background-size: cover;
+        background-position: center;
+        color: rgb(243, 230, 230);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      /* Overlay for readability */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        z-index: 0;
+      }
+
+      /* Navigation Bar */
+      .nav-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+        width: 100%;
+        background-color: #2b3845;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .nav-item a button {
+        background: linear-gradient(45deg, #2c3e50, #3c3c3d);
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .nav-item a button:hover {
+        background: #525453;
+      }
+
+      /* Table Container */
+      .table-container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(23, 23, 23, 0.3);
+        width: 80%;
+        max-width: 800px;
+        position: relative;
+        z-index: 1;
+        margin-top: 70px;
+      }
+
+      /* Logo Container */
+      .logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      /* Logo Wrapper */
+      .logo-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Institution Logos */
+      .institution-logo {
+        width: 150px;
+        height: auto;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        border-radius: 8px;
+      }
+
+      .uwgb-logo {
+        width: 180px;
+        height: auto;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        border-radius: 8px;
+      }
+
+      /* Logo Label */
+      .logo-label {
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Table Styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      th {
+        background: linear-gradient(45deg, #2c3e50, #3498db);
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      td {
+        font-size: 15px;
+      }
+
+      tr:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Heading */
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html"
+      ><img
+        class="top-left-icon"
+        src="https://i.pinimg.com/236x/e7/05/a5/e705a5d8cc25357c112e37d851844cab.jpg"
+        alt="Icon"
+    /></a>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+      <div class="nav-item">
+        <a href="biography.html"><button>My Biography</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="test cide.html"><button>Education</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="cv.html"><button>Resume</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="Achievements.html"><button>Achievements</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="hobbies.html"><button>Hobbies</button></a>
+      </div>
+      <div class="nav-item">
+        <a href="photos.html"><button>Photo Gallery</button></a>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <h1>Educational Background</h1>
+      <div class="logo-container">
+        <!-- Prithvi Narayan Logo with Label -->
+        <div class="logo-wrapper">
+          <img
+            class="institution-logo"
+            src="./img/download.png"
+            alt="Prithvi Narayan Logo"
+          />
+          <span class="logo-label">PNSS</span>
+        </div>
+        <!-- UWGB Logo with Label -->
+        <div class="logo-wrapper">
+          <img
+            class="uwgb-logo"
+            src="https://www.uwgb.edu/UWGBCMS/media/Assessment/Images/uwgb-campus.jpg"
+            alt="UWGB Campus"
+          />
+          <span class="logo-label">UWGB</span>
+        </div>
+        <!-- Viswa Niketan Logo with Label -->
+        <div class="logo-wrapper">
+          <img
+            class="institution-logo"
+            src="./img/Viswa niketan.png"
+            alt="Viswa Niketan Logo"
+          />
+          <span class="logo-label">VNSS</span>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Program</th>
+            <th>GPA/Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Prithvi Narayan Higher Secondary School</td>
+            <td>Secondary School</td>
+            <td>3.80 GPA</td>
+          </tr>
+          <tr>
+            <td>Viswa Niketan Secondary School</td>
+            <td>Science + Computer Science</td>
+            <td>3.32 (Grade 11)<br />3.67 (Grade 12)</td>
+          </tr>
+          <tr>
+            <td>University of Wisconsin-Green Bay</td>
+            <td>Information Science (Current)</td>
+            <td>In Progress 🚀<br />Expected Graduation: 2028</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
