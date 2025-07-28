@@ -9,3 +9,83 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
+/* ===== Hamburger Menu Styles ===== */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 1000;
+}
+
+.hamburger-line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #3498db;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-line:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-line:nth-child(3) {
+    bottom: 0;
+}
+
+/* Mobile Menu State */
+.menu-open .hamburger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .hamburger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Navigation Container */
+.nav-container {
+    transition: transform 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(44, 62, 80, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 20px;
+        transform: translateX(-100%);
+        z-index: 900;
+    }
+    
+    .menu-open .nav-container {
+        transform: translateX(0);
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+        opacity: 0;
+    }
+}
