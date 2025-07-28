@@ -13,6 +13,8 @@
         margin: 0;
         padding: 0;
         background-image: url(./img/fabrizio-conti-kXVogATbFgA-unsplash.jpg);
+        background-size: cover;
+        background-attachment: fixed;
       }
 
       .nav-container {
@@ -46,7 +48,7 @@
         max-width: 800px;
         margin: 50px auto;
         padding: 20px;
-        background-color: hwb(0 82% 14%);
+        background-color: rgba(255, 255, 255, 0.9);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
       }
@@ -54,12 +56,14 @@
       h1 {
         text-align: center;
         color: #444;
+        margin-bottom: 30px;
       }
 
       h2 {
         color: #555;
         border-bottom: 2px solid #ddd;
         padding-bottom: 10px;
+        margin-top: 30px;
       }
 
       ul {
@@ -73,29 +77,43 @@
         padding: 15px;
         border-left: 5px solid #007bff;
         border-radius: 4px;
+        transition: transform 0.2s ease;
       }
 
       ul li:hover {
         background-color: #e9e9e9;
+        transform: translateX(5px);
       }
 
       .date {
         color: #777;
         font-style: italic;
+        display: block;
+        margin-top: 5px;
       }
 
       .footer {
         text-align: center;
         margin-top: 30px;
         color: #777;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
       }
 
       /* Mobile Responsiveness */
       @media (max-width: 768px) {
+        body {
+          background-attachment: scroll;
+        }
+        
         .nav-container {
           flex-direction: column;
           gap: 10px;
           padding: 15px;
+        }
+        
+        .nav-item button {
+          width: 100%;
         }
         
         .container {
@@ -110,10 +128,24 @@
         
         h1 {
           font-size: 24px;
+          margin-bottom: 20px;
         }
         
         h2 {
           font-size: 20px;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          margin: 20px 10px;
+          padding: 10px;
+        }
+        
+        ul li {
+          padding: 8px;
+          font-size: 13px;
         }
       }
     </style>
@@ -151,20 +183,17 @@
 
       <!-- Academic Achievements -->
       <h2>Academic Achievements</h2>
-      <ul itemid="i">
+      <ul>
         <li>
-          <strong>Highest Grade Holder </strong> - Achieved the highest GPA in
-          my 10th grade .
+          <strong>Highest Grade Holder</strong> - Achieved the highest GPA in my 10th grade.
           <span class="date">2021</span>
         </li>
         <li>
-          <strong>Debate</strong> - Got a second position in a debate
-          compitition.
+          <strong>Debate</strong> - Got second position in a debate competition.
           <span class="date">2021</span>
         </li>
         <li>
-          <strong>Research Projects</strong> - : Won a top position on research
-          projects at high school about neuclear and atomic bombs.
+          <strong>Research Projects</strong> - Won top position on research projects at high school about nuclear and atomic bombs.
           <span class="date">2021</span>
         </li>
       </ul>
@@ -173,27 +202,24 @@
       <h2>Extracurricular Activities</h2>
       <ul>
         <li>
-          <strong> Singing</strong> - I have performed in many Cultural events,
-          Fests, and school annual programs.
+          <strong>Singing</strong> - Performed in many cultural events, fests, and school annual programs.
           <span class="date">2023</span>
         </li>
         <li>
-          <strong>Football Team</strong> - Played as a key player in the school
-          football team, winning the inter-school tournament.
+          <strong>Football Team</strong> - Played as key player in school football team, winning inter-school tournament.
           <span class="date">2022</span>
         </li>
         <li>
-          <strong>School Band</strong> - Played the guitar in the school band,
-          performing at various events. <span class="date">2021</span>
-        </li>
-        <li>
-          <strong>Arm Wrestling </strong> - Played many arm wrestling
-          championship cups.
+          <strong>School Band</strong> - Played guitar in school band, performing at various events.
           <span class="date">2021</span>
         </li>
         <li>
-          <strong>Video Editing</strong>-Worked as a content creator after my
-          high school and gained several followrs.<span class="2023"> </span>
+          <strong>Arm Wrestling</strong> - Competed in many arm wrestling championship cups.
+          <span class="date">2021</span>
+        </li>
+        <li>
+          <strong>Video Editing</strong> - Worked as content creator after high school and gained several followers.
+          <span class="date">2023</span>
         </li>
       </ul>
 
@@ -201,27 +227,24 @@
       <h2>Awards and Certifications</h2>
       <ul>
         <li>
-          <strong>Best Team Captian</strong> - Won Tarakeshwor Mayor cup two
-          times.
+          <strong>Best Team Captain</strong> - Won Tarakeshwor Mayor cup two times.
           <span class="date">2022</span>
         </li>
         <li>
-          <strong>VFX Through Blender Certification</strong> - Completed an
-          advanced Blender and Render Course in Udemy after my high school.
+          <strong>VFX Through Blender Certification</strong> - Completed advanced Blender and Render Course in Udemy.
           <span class="date">2023</span>
         </li>
         <li>
-          <strong>Professional Chef Certification</strong> - Certification In
-          Cook and Barista Training with 1 year experience.
+          <strong>Professional Chef Certification</strong> - Certification in Cook and Barista Training with 1 year experience.
           <span class="date">2021</span>
         </li>
       </ul>
+      
       <h3>Some certifications</h3>
-      <a href="certifications.html"> Click here!</a>
+      <a href="certifications.html">Click here!</a>
 
-      <!-- Footer -->
       <div class="footer">
-        <p>My Achievements.</p>
+        <p>My Achievements</p>
       </div>
     </div>
   </body>
