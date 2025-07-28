@@ -1,5 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><style>
+  /* ===== MOBILE FIXES (REQUIRED) ===== */
+  @media (max-width: 768px) {
+    /* Fix navigation */
+    .nav-container {
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px;
+    }
+    
+    /* Fix buttons */
+    .nav-item button {
+      width: 100%;
+      padding: 12px;
+    }
+    
+    /* Fix containers */
+    .container, .table-container, .gallery-container {
+      width: 95% !important;
+      margin: 15px auto !important;
+      padding: 15px !important;
+    }
+    
+    /* Fix images */
+    img:not(.top-left-icon) {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* Fix photo grid */
+    .gallery {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 10px !important;
+    }
+  }
+  
+  /* Smaller phones */
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
