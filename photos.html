@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Gallery</title>
+    <title>Display PDF in HTML</title>
     <link rel="stylesheet" href="logo.css" />
     <style>
       body {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(177, 163, 141);
-        overflow-x: hidden;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
       }
 
       .nav-container {
@@ -20,7 +21,6 @@
         padding: 20px;
         background-color: #2c3e50;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-top: 0%;
       }
 
       .nav-item button {
@@ -34,7 +34,7 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 0%;
+        margin-top: 1px;
       }
 
       .nav-item button:hover {
@@ -42,105 +42,53 @@
         transform: translateY(-2px);
       }
 
-      .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        place-items: center;
-        gap: 15px;
-        padding: 20px;
-        max-width: 1500px;
-        width: 100%;
-        border-radius: 20px;
-      }
-
-      .photo {
-        border-radius: 5%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .photo:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(63, 59, 59, 0.3);
-      }
-
-      .photo img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-        border-radius: 5%;
-      }
-
-      .photo p {
-        font-size: 14px;
+      h2 {
         color: #333;
-        margin-top: 5px;
-        margin-right: 20px;
+        margin: 20px 0;
       }
 
-      .maya {
-        display: flex;
-        border-radius: 20px;
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
+      .pdf-container {
+        width: 80%;
+        height: 600px;
+        margin: auto;
+        border: 2px solid #ccc;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
       }
 
-      .hait {
-        color: white;
-        background-color: rgb(58, 57, 57);
-        border-radius: 20px;
-        font-size: 20px;
-        text-align: center;
-        padding: 10px;
-        margin: 20px auto;
-        max-width: 800px;
-      }
-
-      .center {
-        display: block;
-        margin: 0 auto;
-        max-width: 70%;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
 
       /* Mobile Responsiveness */
       @media (max-width: 768px) {
-        .gallery {
-          grid-template-columns: 1fr 1fr;
-        }
-        
-        .maya {
-          flex-direction: column;
-          align-items: center;
-        }
-        
-        .center {
-          max-width: 100%;
-        }
-        
         .nav-container {
           flex-direction: column;
           gap: 10px;
         }
         
-        .hait {
-          font-size: 18px;
-          margin: 10px;
+        .pdf-container {
+          width: 95%;
+          height: 400px;
+        }
+        
+        h2 {
+          font-size: 20px;
+          margin: 15px 10px;
         }
       }
 
       @media (max-width: 480px) {
-        .gallery {
-          grid-template-columns: 1fr;
+        .pdf-container {
+          height: 300px;
         }
         
-        .photo {
-          width: 90%;
-          margin: 0 auto;
+        .nav-item button {
+          padding: 8px 15px;
+          font-size: 14px;
         }
       }
     </style>
@@ -173,51 +121,19 @@
       </div>
     </div>
 
-    <h1 class="hait">You can Find My Photos here</h1>
-    <a href="./img/6213235596499994190.jpg"
-      ><img
-        src="./img/6213235596499994190.jpg"
-        class="center"
-        alt="Main Photo"
-    /></a>
-    <p style="text-align: center">A moment with my friend</p>
-
-    <div class="gallery">
-      <div class="photo">
-        <a href="./img/6213235596499994200.jpg"
-          ><img src="./img/6213235596499994200.jpg" alt="Photo 2"
-        /></a>
-        <p>Sunset view from the hilltop</p>
-      </div>
-      <div class="photo">
-        <a href="./img/6213235596499994183.jpg"
-          ><img src="./img/6213235596499994183.jpg" alt="Photo 3"
-        /></a>
-        <p>Exploring the beauty of nature</p>
-      </div>
-      <div class="photo">
-        <a href="./img/20250203_111818.jpg"
-          ><img src="./img/20250203_111818.jpg" alt="Photo 4"
-        /></a>
-        <p>Snowfall</p>
-      </div>
-      <div class="photo">
-        <a href="./img/6213235596499994187.jpg"
-          ><img src="./img/6213235596499994187.jpg" alt="Photo 5"
-        /></a>
-        <p>Peaceful morning in the village</p>
-      </div>
-    </div>
-
-    <div class="maya">
-      <div class="photo">
-        <img src="./img/6213235596499994199.jpg" alt="Photo 6" />
-        <p>Cycling</p>
-      </div>
-      <div class="photo">
-        <img src="./img/6213235596499994188.jpg" alt="Photo 7" />
-        <p>A moment with brothers</p>
-      </div>
+    <h2>View PDF File</h2>
+    <div class="pdf-container">
+      <object
+        data="BvZqBYZPrK.pdf"
+        type="application/pdf"
+        width="100%"
+        height="600px"
+      >
+        <p>
+          Your browser does not support PDFs.
+          <a href="Class work 0214 week 4.pdf">Download it here</a>.
+        </p>
+      </object>
     </div>
   </body>
 </html>
