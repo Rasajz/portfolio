@@ -4,23 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Professional Portfolio</title>
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" hrer="style2.css" />
-
-    <!-- Font Awesome for icons -->
-
+    <link rel="stylesheet" href="logo.css" />
     <link rel="stylesheet" href="style2.css" />
     <link rel="stylesheet" href="header.css" />
-    <a href="index.html"
-      ><img
-        class="top-left-icon"
-        src="https://i.pinimg.com/236x/e7/05/a5/e705a5d8cc25357c112e37d851844cab.jpg"
-        alt="Icon"
-    /></a>
+    <style>
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 20px;
+        }
+        
+        .text {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+        
+        .image-pp {
+          width: 200px;
+          height: 250px;
+          margin: 0 auto;
+        }
+        
+        h1 {
+          font-size: 24px;
+        }
+        
+        .nav-container {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Top-left icon -->
     <a href="index.html"
       ><img
         class="top-left-icon"
@@ -28,7 +45,6 @@
         alt="Icon"
     /></a>
 
-    <!-- Navigation Bar -->
     <div class="nav-container">
       <div class="nav-item">
         <a href="biography.html"><button>My Biography</button></a>
@@ -50,7 +66,6 @@
       </div>
     </div>
 
-    <!-- Main Content -->
     <div class="container">
       <div class="text">
         <h1>Welcome to My Portfolio</h1>
@@ -64,7 +79,6 @@
       <img class="image-pp" src="./img/index.jpg" alt="Profile Picture" />
     </div>
 
-    <!-- Social Media Icons -->
     <div class="social-icons">
       <a
         href="https://www.youtube.com/shorts/u-z4FF9kmIM?feature=share"
@@ -83,7 +97,6 @@
       ></a>
     </div>
 
-    <!-- Footer -->
     <div class="footer">&copy; 2023 My Original Portfolio. UWGB</div>
   </body>
 </html>
