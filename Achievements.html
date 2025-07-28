@@ -25,8 +25,8 @@
       }
 
       .nav-item button {
-        background-color: #4a4554; /* Modern blue */
-        color: #ffffff; /* White text */
+        background-color: #4a4554;
+        color: #ffffff;
         border: none;
         padding: 10px 20px;
         font-size: 16px;
@@ -38,8 +38,8 @@
       }
 
       .nav-item button:hover {
-        background-color: #525455; /* Darker blue on hover */
-        transform: translateY(-2px); /* Slight lift effect */
+        background-color: #525455;
+        transform: translateY(-2px);
       }
 
       .container {
@@ -88,6 +88,33 @@
         text-align: center;
         margin-top: 30px;
         color: #777;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          gap: 10px;
+          padding: 15px;
+        }
+        
+        .container {
+          margin: 30px 15px;
+          padding: 15px;
+        }
+        
+        ul li {
+          padding: 10px;
+          font-size: 14px;
+        }
+        
+        h1 {
+          font-size: 24px;
+        }
+        
+        h2 {
+          font-size: 20px;
+        }
       }
     </style>
   </head>
