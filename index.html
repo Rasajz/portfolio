@@ -78,7 +78,76 @@
         }
       }
     </style>
-  </head>
+  </head><!-- Load GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+<script>
+    // Create hamburger button
+    const hamburger = document.createElement('div');
+    hamburger.className = 'hamburger';
+    hamburger.innerHTML = `
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    `;
+    document.body.appendChild(hamburger);
+    
+    const navContainer = document.querySelector('.nav-container');
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    // Menu state
+    let menuOpen = false;
+    
+    // Toggle menu
+    hamburger.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        document.body.classList.toggle('menu-open');
+        
+        if (menuOpen) {
+            // Menu opening animation
+            gsap.to(navContainer, {
+                x: 0,
+                duration: 0.5,
+                ease: "power3.out"
+            });
+            
+            gsap.to(navItems, {
+                opacity: 1,
+                y: 0,
+                duration: 0.4,
+                stagger: 0.1,
+                delay: 0.3
+            });
+        } else {
+            // Menu closing animation
+            gsap.to(navItems, {
+                opacity: 0,
+                y: 20,
+                duration: 0.3,
+                stagger: -0.1
+            });
+            
+            gsap.to(navContainer, {
+                x: "-100%",
+                duration: 0.5,
+                delay: 0.2,
+                ease: "power3.in"
+            });
+        }
+    });
+    
+    // Close menu when clicking links
+    document.querySelectorAll('.nav-item a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (menuOpen) {
+                hamburger.click();
+            }
+        });
+    });
+    
+    // Initialize items off-screen
+    gsap.set(navItems, { y: 20, opacity: 0 });
+</script>
   <body>
     <a href="index.html"
       ><img
